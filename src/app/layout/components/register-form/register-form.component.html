@@ -1,0 +1,32 @@
+<form [formGroup]="registerForm" novalidate>
+  <tc-form-group>
+    <tc-input [placeholder]="'Name'" formControlName="name"></tc-input>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-input [placeholder]="'Email address'" [type]="'email'" formControlName="email"></tc-input>
+  </tc-form-group>
+
+  <tc-form-group>
+    <tc-input [placeholder]="'Password'" [type]="'password'" formControlName="password"></tc-input>
+  </tc-form-group>
+  
+  <tc-form-group>
+    <tc-input [placeholder]="'Mobile'" [type]="'mobile'" formControlName="mob"></tc-input>
+  </tc-form-group>
+  <tc-form-group>
+    <tc-switcher [value]="true">I agree to the Terms and Privacy.</tc-switcher>
+  </tc-form-group>
+
+  <tc-alert *ngIf="this.status!=''" [removable]="true" [view]="status" class="mb-4">
+    {{texttoshow}}
+   </tc-alert>
+
+
+
+  <div class="actions justify-content-between">
+    <button tc-button [view]="'accent'"  (click)="send()"   [beforeIcon]="'icofont-plus'">
+      Register
+    </button>
+  </div>
+</form>

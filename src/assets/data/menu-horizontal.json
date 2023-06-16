@@ -1,0 +1,51 @@
+[
+  {
+    "title": "SecurePark",
+    "groupTitle": true
+  },
+  {
+    "title": "Main",
+    "icon": {
+      "class": "icofont-stethoscope-alt"
+    },
+    "routing": "main"
+  },
+
+  {
+    "title": "Slote settigs",
+    "icon": {
+      "class": "icofont-stethoscope-alt"
+    },
+    "routing": "slote_settings"
+  },
+
+
+
+  {
+    "title": "Reservation",
+    "icon": {
+      "class": "icofont-stethoscope-alt"
+    },
+    "routing": "reservation"
+  },
+  {
+    "title": "Customers",
+    "icon": {
+      "class": "icofont-stethoscope-alt"
+    },
+    "routing": "customers"
+  },
+  {
+    "title": "All Reservations",
+    "icon": {
+      "class": "icofont-stethoscope-alt"
+    },
+    "routing": "all_reservations"
+  }
+
+
+
+  
+
+
+]

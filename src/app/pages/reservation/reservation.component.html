@@ -1,0 +1,77 @@
+
+
+<div>
+
+   
+
+
+        <tc-card  class="mb-2">
+            <form  [formGroup]="appointmentForm"  class="row">
+              <div class="col-12 col-md-3">
+                <tc-form-group>
+                    <tc-select [placeholder]="'Select Vehicle Type'" formControlName="car_type"  [options]="car_type"></tc-select>
+                  </tc-form-group>
+              </div>
+              <div class="col-12 col-md-3">
+                <tc-form-group>
+                    <tc-select [placeholder]="'Disable person'" formControlName="disable_person"  [options]="disable_person"></tc-select>
+                  </tc-form-group>
+              </div>
+              <div class="col-12 col-md-3">
+                <tc-form-group>
+                    <tc-select [placeholder]="'Shade'" formControlName="shade"  [options]="shade"></tc-select>
+                  </tc-form-group>
+              </div>
+
+              <div class="col-12 col-md-3">
+                <tc-form-group>
+                    <nz-date-picker formControlName="date" ></nz-date-picker>
+                  </tc-form-group>
+
+
+              </div>
+
+              <div    class="col-12 col-md-3">
+                <button
+
+                (click)=" search()"
+                  tc-button
+                  [block]="true"
+                  
+                  [view]="'success'"
+                  [tcShape]="500"
+                  [afterIcon]="'icofont-pixels'"
+                >
+                  Search
+                </button>
+              </div>
+            </form>
+          </tc-card>
+
+
+
+
+</div>
+
+
+<div class="row">
+  <div class="col-12 col-md-4" *ngFor="let dep of slotelist; let l = last; let i = index">
+    <tc-card
+      class="department"
+      [img]="dep.img"
+      
+      [tcGradient]="['#fff', '#ebebeb']"
+      [ngClass]="{ 'mb-0': l, 'mb-md-0': (i === (slotelist.length - 2)) || (i === (slotelist.length - 3)) }"
+    >
+      <h3 class="h4 mt-0">Slote A{{ i +1}}</h3>
+
+  
+
+      <p>{{ dep.car_type }}</p>
+    
+      <div class="button-box pb-2">
+        <a [routerLink]="['../slot_view', { value: dep.slote_id,date: appointmentForm.value.date}]" tc-button [view]="'accent'" [outline]="true" [afterIcon]="'icofont-prescription'">Reserve</a>
+      </div>
+    </tc-card>
+  </div>
+</div>

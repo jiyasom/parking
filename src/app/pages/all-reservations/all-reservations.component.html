@@ -1,0 +1,47 @@
+<tc-card *ngIf="bookings && bookings.length" [title]="'All Bookings'" class="mb-0">
+    <div class="table-wrap">
+      <nz-table #editRowTable nzBordered [nzData]="bookings" [nzShowPagination]="false">
+        <thead>
+        <tr>
+          <th>id</th>
+          <th>Reservations Id</th>
+          <th>Slote Id</th>
+          <th>Date</th>
+          <th>Cust Id</th>
+          <th>Slote No</th>
+          <th>Car Type</th>
+          <th>My slote</th>
+          <th>Amount Received</th>
+  
+         
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of editRowTable.data;let i=index">
+          <ng-container >
+            <td>
+              <div class="d-flex align-items-center">
+                <strong class="text-nowrap">{{i+1 }}</strong>
+              </div>
+            </td>
+
+
+
+            <td>{{ data.reservations_id }}</td>
+            <td>{{ data.slote_id }}</td>
+            <td>{{ data.date }}</td>
+            <td>{{ data.cust_id }}</td>
+            <td>{{ data.slote_no }}</td>
+            <td>{{ data.car_type }}</td>
+            <td>{{ data.my_slote }}</td>
+            <td>{{ data.amount_received }}</td>
+            
+          </ng-container>
+          <!-- <ng-template #editTemplate>
+           
+          </ng-template> -->
+        </tr>
+        </tbody>
+      </nz-table>
+    </div>
+  </tc-card>

@@ -1,0 +1,36 @@
+<tc-card class="mb-0">
+    <tc-table [rows]="customers" [hovered]="true" [pagination]="true">
+       
+  
+      <tc-table-col [columnTitle]="'Customer id'" [columnName]="'cust_id'" [enableSorting]="true">
+        <ng-template #tableTDTemplate let-value>
+          <strong>{{ value }}</strong>
+        </ng-template>
+      </tc-table-col>
+  
+      <tc-table-col [columnTitle]="'Name'" [columnName]="'name'" [enableSorting]="true">
+        <ng-template #tableTDTemplate let-value>
+          <strong>{{ value }}</strong>
+        </ng-template>
+      </tc-table-col>
+  
+      <tc-table-col [columnTitle]="'Email'" [columnName]="'email'" [enableSorting]="true">
+        <ng-template #tableTDTemplate let-value>
+          <span class="nowrap" [tcColor]="'#a5a5a5'">{{ value }}</span>
+        </ng-template>
+      </tc-table-col>
+      <tc-table-col [columnTitle]="'Mobile'" [columnName]="'mob'" [enableSorting]="true">
+        <ng-template #tableTDTemplate let-value>
+          <span class="nowrap" [tcColor]="'#a5a5a5'">{{ value }}</span>
+        </ng-template>
+      </tc-table-col>
+    
+  
+  
+      
+     
+  
+     
+    
+    </tc-table>
+  </tc-card>
