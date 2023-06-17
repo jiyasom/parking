@@ -13,11 +13,11 @@ import { slote_settings } from 'src/app/ui/interfaces/user';
 import { IOption } from 'src/app/ui/interfaces/option';
 
 @Component({
-  selector: 'page-appointments',
-  templateUrl: './appointments.component.html',
-  styleUrls: ['./appointments.component.scss']
+  selector: 'page-slote-settings',
+  templateUrl: './slote-settings.component.html',
+  styleUrls: ['./slote-settings.component.scss']
 })
-export class PageAppointmentsComponent extends BasePageComponent implements OnInit, OnDestroy {
+export class PageSloteSettingsComponent extends BasePageComponent implements OnInit, OnDestroy {
   @ViewChild('modalBody', { static: true }) modalBody: ElementRef<any>;
   @ViewChild('modalFooter', { static: true }) modalFooter: ElementRef<any>;
 

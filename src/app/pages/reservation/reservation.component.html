@@ -70,7 +70,7 @@
       <p>{{ dep.car_type }}</p>
     
       <div class="button-box pb-2">
-        <a [routerLink]="['../slot_view', { value: dep.slote_id,date: appointmentForm.value.date}]" tc-button [view]="'accent'" [outline]="true" [afterIcon]="'icofont-prescription'">Reserve</a>
+        <a [routerLink]="['../slot_view', { value: dep.slote_id,date: appointmentForm.value.date}]" tc-button [view]="'accent'" [outline]="true" [afterIcon]="'icofont-prescription'">{{user_type=='customer'?'Reserve':'View'}}</a>
       </div>
     </tc-card>
   </div>

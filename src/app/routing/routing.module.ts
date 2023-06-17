@@ -10,7 +10,7 @@ import { Page404Component } from '../pages/page-404';
 import { PageSignInComponent } from '../pages/sign-in';
 import { PageSignUpComponent } from '../pages/sign-up';
 import { AuthGuard } from '../layout/components/login-form/auth.guard';
-import { PageAppointmentsComponent } from '../pages/appointments';
+import { PageSloteSettingsComponent } from '../pages/appointments';
 import { ReservationComponent } from '../pages/reservation/reservation.component';
 import { CustomersListComponent } from '../pages/customers-list/customers-list.component';
 import { SloteviewComponent } from '../pages/sloteview/sloteview.component';
@@ -28,7 +28,7 @@ import { AllReservationsComponent } from '../pages/all-reservations/all-reservat
 
 const privateRoutes: Routes = [
 
-  {path:'slote_settings',component:PageAppointmentsComponent},
+  {path:'slote_settings',component:PageSloteSettingsComponent},
   {path:'reservation',component:ReservationComponent},
   {path:'customers',component:CustomersListComponent},
   {path:'slot_view',component:SloteviewComponent},

@@ -1,1 +1,1 @@
-export * from './appointments.component';
+export * from './slote-settings.component';

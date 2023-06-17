@@ -1,4 +1,4 @@
-import { PageAppointmentsComponent } from 'src/app/pages/appointments';
+import {  PageSloteSettingsComponent } from 'src/app/pages/appointments';
 import { MainPageComponent } from 'src/app/pages/main/main.component';
 import { Page404Component } from 'src/app/pages/page-404';
 import { PageSignInComponent } from 'src/app/pages/sign-in';
@@ -9,5 +9,5 @@ export const pages = [
   PageSignInComponent,
   PageSignUpComponent,
   Page404Component,
-  PageAppointmentsComponent
+  PageSloteSettingsComponent
 ];

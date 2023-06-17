@@ -6,6 +6,7 @@ import { HttpService } from 'src/app/services/http/http.service';
 import { TCModalService } from 'src/app/ui/services/modal/modal.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IOption } from 'src/app/ui/interfaces/option';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reservation',
@@ -24,7 +25,8 @@ export class ReservationComponent extends BasePageComponent implements OnInit, O
   date: Date;
 
 
-
+  is_ActveButton
+  texttoshow
 
 
 
@@ -33,7 +35,9 @@ export class ReservationComponent extends BasePageComponent implements OnInit, O
     store: Store<IAppState>,
     httpSv: HttpService,
     private modal: TCModalService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router:Router
+
   ) {
     super(store, httpSv);
 
@@ -75,6 +79,22 @@ slotelist:any=[]
 
      this.postdata('slot-settings', 'slotelist', 'setLoaded',this.appointmentForm.value);
   }
+
+is_open_moveNext=0;
+routeTeNext(id){
+  
+  this.is_ActveButton=0
+if(this.user_type=='customer'&& this.date==undefined){
+  this.is_ActveButton=1
+  return false
+}
+// alert('haiiiiiiiiiii')
+
+this.router.navigate(['vertical/slot_view',{ value:id , date: this.appointmentForm.value.date}] );
+ 
+}
+
+
 
 
   initForm() {
