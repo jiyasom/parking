@@ -63,8 +63,7 @@ export class RegisterFormComponent implements OnInit {
  this.httpSv.register(body).subscribe(
   (data:any) => {
 
-    if(data.token != null){
- 
+
       localStorage.setItem('cust_id',data.cust_id)
       localStorage.setItem('user_type','customer')
       localStorage.setItem('token', data.token);
@@ -74,7 +73,7 @@ export class RegisterFormComponent implements OnInit {
         email: ['', Validators.required],
         password: ['', Validators.required]
       });
-    }
+    
   },
   err => {
     console.log(err);

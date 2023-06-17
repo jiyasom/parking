@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Customer",
+    "groupTitle": true
+  },
+  {
+    "title": "Reservation",
+    "icon": {
+      "class": "icofont-stethoscope-alt"
+    },
+    "routing": "reservation"
+  }
+]

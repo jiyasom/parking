@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Admin",
+    "groupTitle": true
+  },
+
+  {
+    "title": "Slote settigs",
+    "icon": {
+      "class": "icofont-ui-settings"
+    },
+    "routing": "slote_settings"
+  },
+
+  {
+    "title": "Reservation",
+    "icon": {
+      "class": "icofont-bootstrap"
+    },
+    "routing": "reservation"
+  },
+  {
+    "title": "Customers",
+    "icon": {
+      "class": "icofont-stethoscope-alt"
+    },
+    "routing": "customers"
+  },
+  {
+    "title": "All Reservations",
+    "icon": {
+      "class": "icofont-stethoscope-alt"
+    },
+    "routing": "all_reservations"
+  }
+
+
+]

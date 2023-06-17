@@ -64,7 +64,7 @@ const publicRoutes: Routes = [
 export const ROUTES: Routes = [
   {
     path: '',
-    redirectTo: '/vertical/main',
+    redirectTo: '/public/sign',
     pathMatch: 'full'
   },
   {
