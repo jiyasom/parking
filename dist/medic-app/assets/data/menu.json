@@ -22,14 +22,14 @@
   {
     "title": "Customers",
     "icon": {
-      "class": "icofont-stethoscope-alt"
+      "class": "icofont-manage-user"
     },
     "routing": "customers"
   },
   {
     "title": "All Reservations",
     "icon": {
-      "class": "icofont-stethoscope-alt"
+      "class": "icofont-user-notes"
     },
     "routing": "all_reservations"
   }
