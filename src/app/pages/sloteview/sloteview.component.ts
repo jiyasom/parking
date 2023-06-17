@@ -101,7 +101,7 @@ this.is_ActveButton=0
     slote_no:this.time_slote_id,
     cust_id:localStorage.getItem('cust_id')
     }
-    
+
 
     this.httpSv.postdata(ar_obj,'book_slote').subscribe(
       respo => {

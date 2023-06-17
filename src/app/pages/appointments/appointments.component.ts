@@ -39,7 +39,7 @@ export class PageAppointmentsComponent extends BasePageComponent implements OnIn
   appointmentForm: FormGroup;
   currentAvatar: string | ArrayBuffer;
   defaultAvatar: string;
-  doctors: slote_settings[];
+ 
 
   constructor(
     store: Store<IAppState>,
@@ -62,7 +62,7 @@ export class PageAppointmentsComponent extends BasePageComponent implements OnIn
       ]
     };
     this.appointments = [];
-    this.doctors = [];
+
     this.defaultAvatar = 'assets/content/anonymous-400.jpg';
     this.currentAvatar = this.defaultAvatar;
   }
@@ -75,8 +75,8 @@ export class PageAppointmentsComponent extends BasePageComponent implements OnIn
 
 
     this.getData('assets/data/vehicle_type.json', 'car_type');
-    this.getData('http://localhost:3000/api/create_slote', 'appointments', 'setLoaded');
-    this.getData('assets/data/doctors.json', 'doctors');
+    this.GET_API_DATA('create_slote', 'appointments', 'setLoaded');
+
 
 
     this.date = null;

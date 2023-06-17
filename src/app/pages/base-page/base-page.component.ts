@@ -46,6 +46,24 @@ export class BasePageComponent implements OnInit, OnDestroy {
     );
   }
 
+  GET_API_DATA(url: string, dataName: string, callbackFnName?: string) {
+    this.httpSv.getData(url).subscribe(
+      data => {
+        this[dataName] = data;
+      },
+      err => {
+        console.log(err);
+      },
+      () => {
+        (callbackFnName && typeof this[callbackFnName] === 'function') ? this[callbackFnName](this[dataName]) : null;
+      }
+    );
+  }
+
+
+
+
+
 
   postdata(url: string, dataName: string, callbackFnName?: string,source?:any) {
   

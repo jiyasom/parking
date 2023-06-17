@@ -76,7 +76,8 @@ status=''
 
     if(data){
 
-localStorage.setItem('cust_id',data.cust_id)
+
+localStorage.setItem('cust_id',data.user.cust_id)
       localStorage.setItem('user_type','customer')
       localStorage.setItem('token', data.token);
       this.router.navigate(['/admin/reservation']);

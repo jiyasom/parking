@@ -17,6 +17,20 @@ export class HttpService {
       catchError(this.handleError)
     );
   }
+
+
+  GET_API_DATA(source: string) {
+    return this.http.get(environment.base_api+source).pipe(
+      tap((res: any) => res),
+      catchError(this.handleError)
+    );
+  }
+
+
+
+
+
+
   // .post<any>(environment.base_api + `admin/login`, data)
   postdata(source: any,url:string) {
     return this.http.post<any>(environment.base_api+url,source).pipe(
