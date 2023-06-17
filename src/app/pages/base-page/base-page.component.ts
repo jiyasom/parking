@@ -47,7 +47,7 @@ export class BasePageComponent implements OnInit, OnDestroy {
   }
 
   GET_API_DATA(url: string, dataName: string, callbackFnName?: string) {
-    this.httpSv.getData(url).subscribe(
+    this.httpSv.GET_API_DATA(url).subscribe(
       data => {
         this[dataName] = data;
       },

@@ -83,11 +83,7 @@ slotelist:any=[]
 is_open_moveNext=0;
 routeTeNext(id){
   
-  this.is_ActveButton=0
-if(this.user_type=='customer'&& this.date==undefined){
-  this.is_ActveButton=1
-  return false
-}
+
 // alert('haiiiiiiiiiii')
 
 this.router.navigate(['vertical/slot_view',{ value:id , date: this.appointmentForm.value.date}] );
