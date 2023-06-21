@@ -9,5 +9,16 @@
       "class": "icofont-stethoscope-alt"
     },
     "routing": "reservation"
+  },
+
+{
+    "title": "My Bookings",
+    "icon": {
+      "class": "icofont-cart-alt"
+    },
+    "routing": "my_bookings"
   }
+
+
+
 ]

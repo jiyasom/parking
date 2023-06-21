@@ -15,6 +15,7 @@ import { ReservationComponent } from '../pages/reservation/reservation.component
 import { CustomersListComponent } from '../pages/customers-list/customers-list.component';
 import { SloteviewComponent } from '../pages/sloteview/sloteview.component';
 import { AllReservationsComponent } from '../pages/all-reservations/all-reservations.component';
+import { MybookingsComponent } from '../pages/mybookings/mybookings.component';
 
 
 
@@ -32,7 +33,9 @@ const privateRoutes: Routes = [
   {path:'reservation',component:ReservationComponent},
   {path:'customers',component:CustomersListComponent},
   {path:'slot_view',component:SloteviewComponent},
-  {path:'all_reservations',component:AllReservationsComponent}
+  {path:'all_reservations',component:AllReservationsComponent},
+  {path:'my_bookings',component:MybookingsComponent}
+
 ];
 
 

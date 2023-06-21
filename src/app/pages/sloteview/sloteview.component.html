@@ -1,18 +1,25 @@
 <div class="">
-    <div class="col-12">
-        <tc-card [title]="'Select Slote'" class="mb-0">
-       
+  <div class="col-12">
+    <tc-card [title]="'Select Slote'" class="mb-0">
 
 
-          <div  class="buttons-list">
-<div *ngFor="let item of slotelist;let i=index;">
-    <button  *ngIf="item.is_reserved==0"   (click)="OpenSlote(item.slote_no,item.price)"  tc-button [outline]="time_slote_id==item.slote_no?false:true" tcColor="#1047d1" [view]="'success'">{{item.slote}}</button>
 
-    <button  *ngIf="item.is_reserved!=0"  tc-button [disabled]="true">{{item.slote}}</button>
+      <div class="buttons-list">
+        <div *ngFor="let item of slotelist;let i=index;">
+          <button *ngIf="item.is_reserved==0" (click)="OpenSlote(item.slote_no,item.price)" tc-button
+            [outline]="time_slote_id==item.slote_no?false:true" tcColor="#1047d1"
+            [view]="'success'">{{item.slote}}</button>
 
-</div>
+          <button *ngIf="item.is_reserved!=0" tc-button [disabled]="true">{{item.slote}}</button>
 
-<div *ngIf="user_type=='customer'" class="col-12 col-md-3 mt-4 mb-4">
+        </div>
+
+      </div>
+    </tc-card>
+  </div>
+
+
+  <div *ngIf="user_type=='customer'" class="col-3 mt-4 mb-4">
     <button
    
     (click)=" ProceedPayment(modalBody, 'Confirm Payment', modalFooter)"
@@ -28,119 +35,29 @@
 </div>
 
 
-
-<ng-container>
-    <ng-template class="font-bold font-large" #modalBody>
-     
-  <strong>Are You Sure want to Proceed Payment ${{price}}</strong>
-      <tc-alert  *ngIf="this.is_ActveButton==1" [removable]="true" [view]="status" [view]="'success'" class="mb-4">
-        {{texttoshow}}
-       </tc-alert>
-  
-  
-  
-  
-    </ng-template>
-  
-    <ng-template #modalFooter>
-      <div class="actions justify-content-between">
-        <button tc-button [type]="'button'" [view]="'error'" (click)="closeModal()">Cancel</button>
-        <button tc-button [view]="'info'" [disabled]="is_ActveButton==0?false:true" (click)="proceed()">
-        Proceed Payment
-        </button>
-      </div>
-    </ng-template>
-  </ng-container>
-
-
-
-
 </div>
 
 
 
+<ng-container>
+  <ng-template class="font-bold font-large" #modalBody>
 
-        </tc-card>
-      </div>
-  
- 
-  </div>
-
-
-
+    <strong>Are You Sure want to Proceed Payment ${{price}}</strong>
+    <tc-alert *ngIf="this.is_ActveButton==1" [removable]="true" [view]="status" [view]="'success'" class="mb-4">
+      {{texttoshow}}
+    </tc-alert>
 
 
 
 
+  </ng-template>
 
-  <ng-container>
-    <ng-template class="font-bold font-large" #modalBody2>
-     
-  <strong class="mb-2">Are You Sure want to Cancel  ? We will Deduct 50% </strong>
-      <tc-alert  *ngIf="this.is_ActveButton==1" [removable]="true" [view]="status" [view]="'success'" class="mb-4 mt-4">
-        {{texttoshow}}
-       </tc-alert>
-    </ng-template>
-  
-    <ng-template #modalFooter2>
-      <div class="actions justify-content-between">
-        <button tc-button [type]="'button'" [view]="'error'" (click)="closeModal()">Cancel</button>
-        <button tc-button [view]="'info'" [disabled]="is_ActveButton==0?false:true" (click)="CancleSlote()">
-      Cancel Slote
-        </button>
-      </div>
-    </ng-template>
-  </ng-container>
-
-
-
-  
-  <tc-card *ngIf="Mybookings && Mybookings.length && user_type=='customer'" [title]="'My Bookings'" class="mb-0">
-    <div class="table-wrap">
-      <nz-table #editRowTable nzBordered [nzData]="Mybookings" [nzShowPagination]="false">
-        <thead>
-        <tr>
-          <th>id</th>
-          <th>Reservations Id</th>
-          <th>Slote Id</th>
-          <th>Date</th>
-          <th>Cust Id</th>
-          <th>Slote No</th>
-          <th>Car Type</th>
-          <th>My slote</th>
-          <th>Amount Received</th>
-  
-          <th [nzAlign]="'right'">Cancel Slote</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let data of editRowTable.data;let i=index">
-          <ng-container >
-            <td>
-              <div class="d-flex align-items-center">
-                <strong class="text-nowrap">{{i+1 }}</strong>
-              </div>
-            </td>
-
-
-
-            <td>{{ data.reservations_id }}</td>
-            <td>{{ data.slote_id }}</td>
-            <td>{{ data.date }}</td>
-            <td>{{ data.cust_id }}</td>
-            <td>{{ data.slote_no }}</td>
-            <td>{{ data.car_type }}</td>
-            <td>{{ data.my_slote }}</td>
-            <td>{{ data.amount_received }}</td>
-            <td [nzAlign]="'right'">
-              <button tc-button [size]="'sm'" [view]="'accent'" (click)="startEdit(data.reservations_id,modalBody2, 'Cancel Slote', modalFooter2)">Cancel Slote</button>
-            </td>
-          </ng-container>
-          <!-- <ng-template #editTemplate>
-           
-          </ng-template> -->
-        </tr>
-        </tbody>
-      </nz-table>
+  <ng-template #modalFooter>
+    <div class="actions justify-content-between">
+      <button tc-button [type]="'button'" [view]="'error'" (click)="closeModal()">Cancel</button>
+      <button tc-button [view]="'info'" [disabled]="is_ActveButton==0?false:true" (click)="proceed()">
+        Proceed Payment
+      </button>
     </div>
-  </tc-card>
+  </ng-template>
+</ng-container>

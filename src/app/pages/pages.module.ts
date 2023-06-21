@@ -27,6 +27,7 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { CustomersListComponent } from './customers-list/customers-list.component';
 import { SloteviewComponent } from './sloteview/sloteview.component';
 import { AllReservationsComponent } from './all-reservations/all-reservations.component';
+import { MybookingsComponent } from './mybookings/mybookings.component';
 
 @NgModule({
   imports: [
@@ -60,6 +61,7 @@ import { AllReservationsComponent } from './all-reservations/all-reservations.co
     CustomersListComponent,
     SloteviewComponent,
     AllReservationsComponent,
+    MybookingsComponent,
   ],
   exports: []
 })
